@@ -3,6 +3,7 @@ import Title from "../components/Title";
 import CartTotal from "../components/CartTotal";
 import { assets } from "../assets/assets";
 import { ShopContext } from "../context/ShopContext";
+import { countries } from "../assets/countries";
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -226,15 +227,20 @@ const PlaceOrder = () => {
             type="number"
             placeholder="Zipcode"
           />
-          <input
+          <select
             required
             onChange={onChangeHandler}
             name="country"
             value={formData.country}
-            className={inputClass}
-            type="text"
-            placeholder="Country"
-          />
+            className={`${inputClass} outline-none`} // Custom styling to match inputClass
+          >
+            <option value="">Select Country</option>
+            {countries.map((item) => (
+              <option key={item.code} value={item.code}>
+                {item.name}
+              </option>
+            ))}
+          </select>
         </div>
         <input
           required
