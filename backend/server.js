@@ -17,8 +17,8 @@ connectCloudinary();
 // middlewares
 app.use(express.json());
 const allowedOrigins = [
-  "http://localhost:5173", // Frontend/Admin Local
-  "http://localhost:5174", // Admin/Frontend Local
+  "https://ecommerce-fullstack-snapkart-yvc9.vercel.app/", // Frontend/Admin Local
+  "https://ecommerce-fullstack-snapkart-izop.vercel.app/", // Admin/Frontend Local
   // Add your Vercel deployment URLs here after deploying, e.g.:
   // 'https://your-frontend-project.vercel.app',
   // 'https://your-admin-project.vercel.app'
